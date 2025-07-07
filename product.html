@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Products</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+
+:root{
+--ff-primary: "Roboto",sans-serif;
+--ff-secondary: "Inter", sans-serif;
+--ff-tertiary: "Roboto", sans-serif;
+--ff-design: "Satisfy", cursive;
+--ff-brand:"margarine",sans-serif;
+--transition: all 0.4s linear ;
+
+
+--clr-primary:#f53b57;
+--clr-secondary:#e9b949;
+--clr-primary-light:#f04660;
+--clr-grey-1:#102a42;
+--clr-grey-2:#617d98;
+--clr-grey-3:#f1f5f8;
+}
+
+        * {
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--clr-grey-3);
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .product {
+           
+            border-radius: 8px;
+            
+            width: calc(33.33% - 20px);
+            padding: 15px 15px 0px 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #4CBB17;
+        }
+
+        .product p {
+            color: var(--clr-primary);
+            font-weight: bold;
+            
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+        html{
+            scroll-behavior:smooth;
+        }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 20px);
+                
+                
+            }
+        }
+
+        @media (max-width:992px) {
+            .product {
+                width: 100%;
+            }
+            .product img{
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- RITHVIK NAVBAR START-->
+    <div class="nav-btn">
+        <label for="nav-check">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+    </div>
+    <input type="checkbox" id="nav-check"/>
+    <label for="nav-check" class="overlay">
+        
+    </label>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <h5>VIRUNTHOMBAL RESTRAURANT</h5>
+            <img src="https://iili.io/3qowpKx.jpg" alt="VIRUNTHOMBAL RESTRAURANT">
+            <span class="nav-close">
+                <label for="nav-check">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="32px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+            </span>
+
+        </div>
+        <ul class="nav-item">
+            <li><a href="index.html#header" class="nav-link">HOME</a></li>
+            <li><a href="index.html#features" class="nav-link">FEATURES</a></li>
+            <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+            <li><a href="index.html#products" class="nav-link">PRODUCTS</a></li>
+            <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+
+    </nav>
+    <!-- RITHVIK NAVBAR END-->
+    <h1 style="text-align:center; margin-bottom: 40px;font-family: var(--ff-design);
+    font-size: 2rem;
+    color: var(--clr-primary);">Food Products List</h1>
+    <div class="container">
+        <div class="product">
+            <img src="https://t3.ftcdn.net/jpg/01/61/13/66/360_F_161136674_NgVFcPtWfwLPY03NpJUrSiH9oDvma9Rn.jpg" alt="Product 1">
+        
+            <h3>IDLY</h3>
+            <p>PRICE : ₹30</p>
+            
+        </div>
+        <div class="product">
+            <img src="https://t3.ftcdn.net/jpg/03/97/46/66/360_F_397466683_4U8hMaUgWdFPNc8KMKUQ4aH2qR1yG0sA.jpg" alt="Product 2">
+            <h3>MASALA DOSA</h3>
+            <p>PRICE : ₹25</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwB0QLT_DUAA4ue2iwOw56IZWMjsnfkJgLJw&s" alt="Product 3">
+            <h3>PONGAL</h3>
+            <p>PRICE : ₹40</p>
+        </div>
+
+        <div class="product">
+            <img src="https://iili.io/3qojF5P.md.jpg" alt="Product 4">
+            <h3>VIRUNTHOMBAL SPL MUTTON BIRIYANI</h3>
+            <p>PRICE : ₹250</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv8WvsjN2Dpi56lVyNMxjSIVUBItqwvsmMxQ&s" alt="Product 5">
+            <h3>VIRUNTHOMBAL SPL CHICKEN BIRIYANI</h3>
+            <p>PRICE : ₹200</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgpDJWsf_TCRZvzcGhQlvPDoZlmSWaQLbwqA&s" alt="Product 6">
+            <h3>VIRUNTHOMBAL SPL MUSHROOM BIRIYANI</h3>
+            <p>PRICE : ₹185</p>
+        </div>
+
+        <div class="product">
+            <img src="https://i.ytimg.com/vi/0KdboN6Rkck/maxresdefault.jpg" alt="Product 7">
+            <h3>CHICKEN 65</h3>
+            <p>PRICE : ₹121</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQd3V9GoXVMWXeY-0OkvLySSKKr95ZFWJTg&s" alt="Product 8">
+            <h3>CHICKEN LOLIPOP</h3>
+            <p>PRICE : ₹159</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkuVKAA3O-fPiaJEBds7dGT6_WZPUM1jLUAg&s" alt="Product 9">
+            <h3>GOBI 65</h3>
+            <p>PRICE : ₹89.9</p>
+        </div>
+
+        <div class="product">
+            <img src="https://iili.io/3qo7b6u.md.jpg" alt="Product 10">
+            <h3>VIRUNTHOMBAL HOT GRILL CHICKEN</h3>
+            <p>PRICE : ₹399</p>
+        </div>
+        <div class="product">
+            <img src="https://iili.io/3qo7DGe.md.png" alt="Product 11">
+            <h3>VIRUNTHOMBAL SPL VEG MEALS</h3>
+            <p>PRICE : ₹120</p>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc7wLX6ZJRkRI7WZh6C7vzkKYJ7PxnovdTpg&s" alt="Product 12">
+            <h3>VIRUNTHOMBAL SPL CRAB GRAVY</h3>
+            <p>PRICE : ₹999</p>
+        </div>
+    </div>
+</body>
+</html>

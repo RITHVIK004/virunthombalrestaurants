@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIRUNTHOMBAL RESTAURANT SIGN</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-box input[type="text"],
+    .form-box input[type="email"],
+    .form-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .password-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .tooltip-box {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      font-size: 0.85rem;
+      color: #333;
+      margin-top: 5px;
+      display: none;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .tooltip-box div {
+      padding: 2px 0;
+    }
+
+    .tooltip-box .valid {
+      color: green;
+    }
+
+    .tooltip-box .invalid {
+      color: red;
+    }
+
+    .success-message {
+      color: green;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <a href="/index.html" class="signup-btn">Home</a>
+
+  <div class="container">
+    <div class="form-content">
+      <div class="form-image">
+        <img src="https://iili.io/FufL9ZN.jpg" alt="Signup illustration" />
+      </div>
+
+      <form class="form-box">
+        <h1>Sign Up</h1>
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Password" required
+                 oninput="checkPasswordStrength()"
+                 onfocus="showTooltip()"
+                 onblur="hideTooltip()" />
+          <div id="tooltip" class="tooltip-box"></div>
+          <div id="success-msg" class="success-message"></div>
+        </div>
+
+        <input type="password" placeholder="Confirm Password" required />
+        <label><input type="checkbox" required /> I accept the Terms of Use and Privacy Policy</label>
+
+        <div class="social-login">
+          <button class="google-btn">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" />
+            Sign in with Google
+          </button>
+          <button class="microsoft-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft" />
+            Sign in with Microsoft
+          </button>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <p>Already a member? <a href="login.html">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkPasswordStrength() {
+      const password = document.getElementById("password").value;
+      const tooltip = document.getElementById("tooltip");
+      const successMsg = document.getElementById("success-msg");
+
+      const rules = [
+        { regex: /[A-Z]/, text: "At least one uppercase letter" },
+        { regex: /[0-9]/, text: "At least one number" },
+        { regex: /[^A-Za-z0-9]/, text: "At least one special character" },
+        { test: password.length >= 8, text: "Minimum 8 characters" }
+      ];
+
+      let allValid = true;
+      const tips = rules.map(rule => {
+        const passed = rule.regex ? rule.regex.test(password) : rule.test;
+        if (!passed) allValid = false;
+        return `<div class="${passed ? 'valid' : 'invalid'}">• ${rule.text}</div>`;
+      });
+
+      tooltip.innerHTML = tips.join("");
+      tooltip.style.display = password.length > 0 ? "block" : "none";
+      if (allValid && password.length > 0) {
+        successMsg.textContent = "✅ Strong password!";
+      } else {
+        successMsg.textContent = "";
+      }
+    }
+
+    function showTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      if (document.getElementById("password").value.length > 0) {
+        tooltip.style.display = "block";
+      }
+    }
+
+    function hideTooltip() {
+      setTimeout(() => {
+        document.getElementById("tooltip").style.display = "none";
+      }, 200);
+    }
+  </script>
+</body>
+</html>

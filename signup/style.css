@@ -1,0 +1,245 @@
+:root{
+--ff-primary: "Roboto",sans-serif;
+--ff-secondary: "Inter", sans-serif;
+--ff-tertiary: "Roboto", sans-serif;
+--ff-design: "Satisfy", cursive;
+--ff-brand:"margarine",sans-serif;
+--transition: all 0.4s linear ;
+
+
+--clr-primary:#f53b57;
+--clr-secondary:#e9b949;
+--clr-primary-light:#f04660;
+--clr-grey-1:#102a42;
+--clr-grey-2:#617d98;
+--clr-grey-3:#f1f5f8;
+}
+html{
+scroll-behavior:smooth;
+
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://iili.io/FuqJvFR.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    color: black;
+  }
+  
+  .form-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(247, 7, 7, 0.3);
+    color: #eee;
+  }
+  
+  input::placeholder {
+    color: #eee;
+  }
+  
+  label {
+    font-size: 12px;
+  }
+  
+  button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #642bff, #ff22e6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 13px;
+    
+  }
+  
+  a {
+    color: red;
+    text-decoration: underline;
+  }
+  .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .form-image1 img{
+    width: 490px;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  .form-image img {
+    width: 410px;
+    height: 560px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .google-btn,
+  .microsoft-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .google-btn {
+    background-color: #ffffff;
+    color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .microsoft-btn {
+    background-color: #2f2f2f;
+    color: #fff;
+  }
+  
+  .google-btn img,
+  .microsoft-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  /*-------sign up------*/
+.signup-btn {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    background: linear-gradient(to right, var(--clr-secondary), var(--clr-primary));
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition:var(--transition);
+    z-index: 1000;
+  }
+  
+  .signup-btn:hover {
+    background: linear-gradient(to right, var(--clr-secondary), var(--clr-primary));
+    outline: 0.125rem solid var(--clr-primary);
+    outline-offset: 0.25rem;
+  }
+/*-------sign up------*/  
+/* ---------- Responsive Styles for Sign Up & Sign In ---------- */
+@media screen and (max-width: 992px) {
+  .form-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 1rem;
+  }
+
+  .form-image img,
+  .form-image1 img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .signup-btn {
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  p,
+  label {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .form-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-image img,
+  .form-image1 img {
+    max-height: 220px;
+  }
+
+  .container {
+    padding: 1rem;
+    width: 95vw;
+    border-radius: 10px;
+  }
+
+  .signup-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
