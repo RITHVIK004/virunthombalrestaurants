@@ -1,4 +1,4 @@
-name: Spring Boot CI 
+name: Spring Boot CI
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest 
+    runs-on: windows-latest
 
     steps:
       - name: Checkout source
@@ -22,3 +22,6 @@ jobs:
 
       - name: Build project with Maven
         run: mvn clean install
+
+      - name: Run tests
+        run: mvn test
